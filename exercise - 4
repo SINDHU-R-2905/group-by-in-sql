@@ -1,0 +1,24 @@
+calculate the average  salary for each  department ,sorted in ascending  order by department name:
+
+create table employee(
+id int,
+first_name varchar(100),
+last_name varchar(100),
+department varchar(100),
+salary int
+);
+
+insert into employee values("1","john","doe","Hr",55000);
+ insert into employee values("2","Robert","Luna","IT","60000");
+ insert into employee values("3","David","Robinson","IT","62000");
+ insert into employee values("4","John","Reinhardt","Hr","54000");
+ insert into employee values("5","jane","smith","IT",60000);
+  insert into employee values("6","bob","johnson","IT",62000);
+  insert into employee values("7","alice","williams","Hr",54000);
+  insert into employee values("8","Eva","Davis","Finance",58000);
+  insert into employee values("9","mike","brown","finance",59000);
+
+  select avg(salary),department
+  from employee
+  group by department
+  order by department asc;
