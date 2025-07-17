@@ -1,0 +1,22 @@
+list all employees in the IT department and sort them by salary in descending order:
+
+create table employee(
+id int,
+first_name varchar(100),
+last_name varchar(100),
+department varchar(100),
+salary int
+);
+
+
+insert into employee values("1","john","doe","Hr",55000);
+ insert into employee values("2","Robert","Luna","IT","60000");
+ insert into employee values("3","David","Robinson","IT","62000");
+ insert into employee values("4","John","Reinhardt","Hr","54000");
+ insert into employee values("5","jane","smith","IT",60000);
+  insert into employee values("6","bob","johnson","IT",62000);
+  insert into employee values("7","alice","williams","Hr",54000);
+  insert into employee values("8","Eva","Davis","Finance",58000);
+  insert into employee values("9","mike","brown","finance",59000);
+
+  select * from employee where department = "IT" order by salary desc;
