@@ -12,5 +12,65 @@ SELECT MAX(POPULATION) - MIN(POPULATION)AS population_difference
 FROM CITY;
 
 
-2.
+2.Write a query identifying the type of each record in the TRIANGLES table using its three side lengths. Output one of the following statements for each record in the table:
+
+Equilateral: It's a triangle with 3 sides of equal length.
+Isosceles: It's a triangle with 2 sides of equal length.
+Scalene: It's a triangle with 3 sides of differing lengths.
+Not A Triangle: The given values of A, B, and C don't form a triangle
+
+CREATE TABLE TRAINGLES(
+  A INT,
+  B INT,
+  C INT
+);
+INSERT INTO TRAINGLES('A','B','C')VALUES
+(20,20,23),
+(20,20,20),
+(20,21,22),
+(13,14,33);
+SELECT
+  CASE
+    WHEN A + B <= C OR A + C <= B OR B + C <= A THEN 'Not A Triangle'
+    WHEN A = B AND B = C THEN 'Equilateral'
+    WHEN A = B OR B = C OR A = C THEN 'Isosceles'
+    ELSE 'Scalene'
+  END AS Triangle_Type
+FROM TRAINGLES;
+
+
+3.Given an integer, , perform the following conditional actions:
+
+If  n is odd, print Weird 
+If  n is even and in the inclusive range of  2 to 5 , print Not Weird 
+If  n is even and in the inclusive range of  6 to 20 , print Weird 
+If  n is even and greater than  20 , print Not Weird 
+Complete the stub code provided in your editor to print whether or not   n is weird.
+
+
+import java.util.*;
+
+public class Solution {
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        if (N % 2 != 0) {
+            System.out.println("Weird");
+        } else if (N >= 2 && N <= 5) {
+            System.out.println("Not Weird");
+        } else if (N >= 6 && N <= 20) {
+            System.out.println("Weird");
+        } else {
+            System.out.println("Not Weird");
+        }
+        scanner.close();
+    }
+}
+
+
+
+
+
   
