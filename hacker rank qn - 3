@@ -88,6 +88,52 @@ field------------------------------------------------------------type
 select SUM(population) AS total_population from CITY where district = 'California';
 
 
+5.Query the average population of all cities in CITY where District is California.
+
+
+                           CITY
+field------------------------------------------------------------type
+1.id                                                             1.number
+2.name                                                           2.varchar2(17)
+3.CountryCode                                                    3.varchar2(3)
+4.district                                                       4.varchar2(20)
+5.population                                                     5.number
+
+select AVG(POPULATION)
+FROM CITY
+where district ='California';
+
+6.Query the average population for all cities in CITY, rounded down to the nearest integer.
+
+                               CITY
+field------------------------------------------------------------type
+1.id                                                             1.number
+2.name                                                           2.varchar2(17)
+3.CountryCode                                                    3.varchar2(3)
+4.district                                                       4.varchar2(20)
+5.population                                                     5.number
+
+select FLOOR(AVG(POPULATION))AS AVG_POPULATION
+FROM CITY;
+
+7.Query the sum of the populations for all Japanese cities in CITY. The COUNTRYCODE for Japan is JPN.
+
+
+                               CITY
+field------------------------------------------------------------type
+1.id                                                             1.number
+2.name                                                           2.varchar2(17)
+3.CountryCode                                                    3.varchar2(3)
+4.district                                                       4.varchar2(20)
+5.population                                                     5.number
+
+
+SELECT SUM(POPULATION) 
+FROM CITY
+WHERE COUNTRYCODE = 'JPN';
+
+
+
 
 
 
