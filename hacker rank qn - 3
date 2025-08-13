@@ -1,0 +1,64 @@
+1.Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+
+  create  table STUDENTS(
+  id int,
+  name varchar(100),
+  marks int
+  );
+  insert into STUDENTS(id,name,marks)values
+  (1,'ashley',81),
+  (2,'samantha',75),
+  (3,'julia',76),
+  (4,'belvet',84);*/
+  select name
+  from STUDENTS
+  where marks > 75
+order by SUBSTR(name,-3),id;
+
+
+2.Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+
+  column------------------------type
+1.employee_id                  1.int
+2.name                         2.varchar(100)
+3.months                       3.int
+4.salary                       4.int
+
+create table employee(
+  employee_id int,
+  name varchar(100),
+  months int,
+  salary int
+  );
+  insert into employee(employee_id,name,months,salary)values
+  (12228,'rose',15,1968),
+  (33645,'angela',1,3443),
+  (45692,'frank',17,1608),
+  (56118,'patrick',7,1345),
+  (59725,'lisa',11,2330),
+  (74197,'kimberly',16,4372),
+  (78454,'bonnie',8,1771),
+  (83565,'michael',6,2017),
+  (98607,'todd',5,3396),
+  (99989,'joe',9,3573);
+    
+    select name
+from employee
+order by name asc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
