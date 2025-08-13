@@ -1,3 +1,16 @@
 1.Query the difference between the maximum and minimum populations in CITY.
 
+                             CITY
+field------------------------------------------------------------type
+1.id                                                             1.number
+2.name                                                           2.varchar2(17)
+3.CountryCode                                                    3.varchar2(3)
+4.district                                                       4.varchar2(20)
+5.population                                                     5.number
+
+SELECT MAX(POPULATION) - MIN(POPULATION)AS population_difference
+FROM CITY;
+
+
+2.
   
