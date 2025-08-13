@@ -44,3 +44,23 @@ FROM STATION
 WHERE  not city regexp '^[aeiou].*[aeiou]$';
 
 
+4.Query the list of CITY names from STATION that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.
+
+                             city
+        field-----------------------------------tytpe
+  1.ID                                         1.NUMBER
+  2. CITY                                      2.VARCHAR2(21)
+  3.STATE                                      3.VARCHAR2(2)
+  4.LAT_N                                      4.NUMBER
+  5.LONG_W                                     5.NUMBER
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY NOT REGEXP '^[aeiou]'  -- does NOT start with a vowel
+  AND CITY NOT REGEXP '[aeiou]$'  -- does NOT end with a vowel
+ORDER BY CITY;
+
+
+
+
+
